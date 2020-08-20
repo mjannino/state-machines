@@ -6,7 +6,7 @@ services:
       context: ./server
       dockerfile: ./Dockerfile
     container_name: state-machines
-    command: uvicorn --reload --workers 1 --host 0.0.0.0 --port 80 main:app
+    command: python server/main.py
     depends_on:
       - postgres
     # environment:
@@ -15,17 +15,3 @@ services:
       - ./server:/opt/state-machines/server
     ports:
       - "80:80"
-
-  # Infrastructure
-  postgres:
-    image: postgres:11.5
-    container_name: statemachines-postgres
-    environment:
-      POSTGRES_DB: statemachines
-      POSTGRES_USER: admin
-      DB: statemachines
-      DBHOST: "127.0.0.1"
-      DBPASS: ""
-      DBUSER: postgres
-    ports:
-      - "5432:5432"
