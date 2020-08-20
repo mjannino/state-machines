@@ -1,3 +1,5 @@
 .history
 !**/__pycache__/
 server/__pycache__
+*.pyc
+server/demos/__pycache__
