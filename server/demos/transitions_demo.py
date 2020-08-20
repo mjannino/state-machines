@@ -191,6 +191,3 @@ def no_commentary():
     scoring_machine.finish_assessment()
     print(scoring_machine.state)
 
-
-if __name__ == "__main__":
-    no_commentary()

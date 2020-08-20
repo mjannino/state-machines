@@ -107,7 +107,3 @@ def no_commentary():
 
     print(scoring_machine.current_state)
 
-
-if __name__ == "__main__":
-    no_commentary()
-
