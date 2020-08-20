@@ -6,7 +6,7 @@ import click
 
 
 @click.command()
-@click.option("--library", prompt="Library:", help="The state machine demo to run.")
+@click.option("--library", prompt="Library", help="The state machine demo to run.")
 def main(library):
     """
     Run each library demo based on input from the user
@@ -19,7 +19,9 @@ def main(library):
     elif library == "transitions":
         transitions_demo()
     else:
-        print("Invalid input, closing.")
+        print(
+            "Invalid input; must be one of: automat, python-statemachine, or transitions."
+        )
 
 
 if __name__ == "__main__":

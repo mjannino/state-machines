@@ -1,0 +1,6 @@
+This is a very silly file to keep the container up because there is no webserver or other keepalive process.
+
+I don't advise doing anything like this in a production environment.
+
+I initially was going to make an interactive REPL but... ran out of motivation to do so.
+    

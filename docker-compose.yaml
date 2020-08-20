@@ -6,9 +6,7 @@ services:
       context: ./server
       dockerfile: ./Dockerfile
     container_name: state-machines
-    command: python server/main.py
-    depends_on:
-      - postgres
+    command: tail -F keepalive
     # environment:
     #   SOME VAR: wow
     volumes:
