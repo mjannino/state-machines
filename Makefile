@@ -10,9 +10,6 @@ start:
 stop:
 	docker-compose down
 
-app.logs:
-	docker logs -f state-machines
-
 app.shell:
 	docker exec -it state-machines /bin/bash
 

@@ -9,6 +9,7 @@ from .assessment_states import (
 
 
 class ScoringMachine(StateMachine):
+    # Define and construct states one-by-one
     not_started = State(STATE_NOT_STARTED, initial=True)
     question = State(STATE_QUESTION)
     question_answered = State(STATE_QUESTION_ANSWERED)
